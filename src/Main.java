@@ -1,4 +1,60 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Main {
+     public static void main(String[] args) {  //НАИЗУСТЬ КАК ОБЪЯВЛЯТЬ МАССИВЫ СХОДУ ПУТАЮСЬ ПОКА И ПОЛЬЗУЮСЬ ИНСТРУКЦИЯМИ
+          //1.
+          String[] months = new String[12];
+          months[0] ="Январь";
+          months[1] ="Февраль";
+          months[2] ="Март";
+          months[3] ="Апрель";
+          months[4] ="Май";
+          months[5] ="Июнь";
+          months[6] ="Июль";
+          months[7] ="Август";
+          months[8] ="Сентябрь";
+          months[9] ="Октябрь";
+          months[10] ="Ноябрь";
+          months[11] ="Декабрь";
+          //2.
+          String[] seasons = new String[] {"Зима", "Весна", "Лето", "Осень"};  //аналогично верхнему, вариант короче
+          //3.
+          String[] week = {"понедельник","вторник","среда","четверг","пятница","суббота","воскресенье"}; //аналогично верхним, вариант еще короче
+
+          //4.
+          int[] dey2 = new int[31];
+
+          for (int i = 0; i < 31; i++) {
+               dey2[i] = i+1;
+          }                                            //лень было писать много чисел (точнее написал и потом стер),
+          // нашел пример кода в инете заполнения числами и приспособил сюда.
+
+          System.out.println("выводим месяцы" +Arrays.asList(months));
+
+          System.out.println("выводим месяцы через другой метод класса Arrays" + Arrays.toString(months));
+          System.out.println("выводим сезоны " +Arrays.toString(seasons));
+          System.out.println("выводим недели" +Arrays.toString(week));
+          System.out.println("выводим дни" +Arrays.toString(dey2));
+
+          System.out.println();
+          System.out.println();
+
+          System.out.println("ДАЛЕЕ ПОЛНАЯ ЕРУНДА. НАшел код и пытался этот цикл адаптировать. Не доделал и уже поздно. " +
+                  "В общем все равно вышлю эту глупость.");
+          String[][] months2 = new String[12][31];
+          months2[0][0] ="Январь";
+          for (int i = 0; i < months2.length; i++) {
+               for (int j = 0; j < dey2[i]; j++) {
+                    System.out.print(months2[i][j] + "\t");
+               }
+               System.out.println(Arrays.toString(months2));
+          }
+
+
+
+
+     }
 }
 
 /*
@@ -16,6 +72,7 @@ public class Main {
 
 Попробуйте вывести эти массивы в консоль. А так-же их отдельные элементы( не все, но хотя бы парочку из разных).
 
+*******
 Задание со звёздочкой (выполнять если легко справились с первым заданием или есть свободное время)
 
 Создайте двумерный массив где первый уровень - месяц, а второй его возможные даты.
